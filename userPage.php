@@ -3,7 +3,7 @@ include_once 'klasy/Baza.php';
 include_once 'klasy/User.php';
 include_once 'klasy/UserManager.php';
 session_start();
-$db = new Baza("127.0.0.1", "root", "root", "klienci");
+$db = new Baza("127.0.0.1", "root", "root", "students", 8889);
 $um = new UserManager();
 
 $sessionId = session_id();

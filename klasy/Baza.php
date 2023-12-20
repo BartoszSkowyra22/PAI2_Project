@@ -2,8 +2,8 @@
 
 class Baza {
      private $mysqli;
-     public function __construct($serwer, $user, $pass, $baza) {
-        $this->mysqli = new mysqli($serwer, $user, $pass, $baza,8889);
+     public function __construct($serwer, $user, $pass, $baza, $port) {
+        $this->mysqli = new mysqli($serwer, $user, $pass, $baza, $port);
         if ($this->mysqli->connect_errno) {
            printf("Nie udało sie połączenie z serwerem: %s\n", $this->mysqli->connect_error);
             exit();

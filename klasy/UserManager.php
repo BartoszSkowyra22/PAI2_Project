@@ -59,18 +59,6 @@ class UserManager {
 
         </body>
         </html>
-
-<!--                <h3>Formularz logowania</h3><p>-->
-<!--        <form action="processLogin.php" method="post">-->
-<!--            <label for="login">Username:</label><br>-->
-<!--            <input type="text" id="login" name="login" required>-->
-<!--            <br><br>-->
-<!--            <label for="passwd">Password:</label><br>-->
-<!--            <input type="password" id="passwd" name="passwd" required>-->
-<!--            <br><br>-->
-<!--            <input type="submit" value="Zaloguj" name="zaloguj">-->
-<!--        </form></p>-->
-<!--        <a href='index.php' >Zarejestruj nowe konto</a>-->
     <?php
     }
     function login($db) {
