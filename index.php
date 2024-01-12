@@ -32,16 +32,6 @@ if(!$action){
     }
 }
 
-
-
-
-
-
-
-
-
-
-
 if ($loggedUserId != -1) {
 
     switch ($action){
@@ -92,24 +82,7 @@ if ($loggedUserId != -1) {
             include('view/assignment_list.php');
 
     }
-    echo $action;
-
-
-
-
-
-
-
-//    $userDataResult = $db->query("SELECT * FROM users WHERE id = $loggedUserId");
-//    $userData = $userDataResult->fetch_assoc();
-//    echo "<h3>ADMIN: </h3>";
-//    echo $userData['id'] . " ".$userData['userName']." ".$userData['email'].$userData['status'];
     echo "<a href='processLogin.php?akcja=wyloguj' > <p>Wyloguj</p></a> </p>";
-
-
-
-
-
 
 } else {
     session_destroy();
