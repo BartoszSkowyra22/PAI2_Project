@@ -1,5 +1,4 @@
 <?php
-
 include_once 'klasy/Baza.php';
 include_once 'klasy/User.php';
 include_once 'klasy/UserManager.php';
@@ -18,13 +17,7 @@ if (filter_input(INPUT_POST, "zaloguj")) {
     if ($userId > 0) {
         $userDataResult = $db->query("SELECT status FROM users WHERE id = $userId");
         $userData = $userDataResult->fetch_assoc();
-
-        if($userData["status"] == 1){
-            header("location:userPage.php");
-        }
-        if($userData["status"] == 2) {
-            header("location:adminPage.php");
-        }
+        header("location:index.php");
     } else if(isset($_SESSION['success']) && $_SESSION['success']==true){
         $msg="juz zalogowano wylogowywanie";
         $_SESSION['success'] = 'false';
