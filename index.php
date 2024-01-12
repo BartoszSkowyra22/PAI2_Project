@@ -21,7 +21,7 @@ $course_name = filter_input(INPUT_POST, 'course_name', FILTER_SANITIZE_STRING);
 
 $course_id = filter_input(INPUT_POST, 'course_id', FILTER_VALIDATE_INT);
 if(!$course_id){
-    $course_id = filter_input(INPUT_POST, 'course_id', FILTER_VALIDATE_INT);
+    $course_id = filter_input(INPUT_GET, 'course_id', FILTER_VALIDATE_INT);
 }
 
 $action = filter_input(INPUT_POST, 'action', FILTER_SANITIZE_STRING);
