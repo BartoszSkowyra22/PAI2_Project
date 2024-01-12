@@ -1,8 +1,11 @@
 1. To use the application you need to create a mySQL database and then the following tables:
     - users
     - logged_in_users
+    - tasks
+    - fields
+Sample database will be added
 
-You can use the following SQL code:
+You can use the following SQL code to create tables:
 
 *users:
 
@@ -19,3 +22,7 @@ CREATE TABLE IF NOT EXISTS `logged_in_users` ( `sessionId` varchar(100) NOT NULL
 PRIMARY KEY (`sessionId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+
+*tasks
+
+ALTER TABLE `tasks` ADD CONSTRAINT `courseId` FOREIGN KEY (`courseId`) REFERENCES `fields`(`courseID`) ON DELETE RESTRICT ON UPDATE RESTRICT;

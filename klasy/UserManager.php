@@ -8,7 +8,7 @@ class UserManager {
         <html lang="pl" >
         <head>
             <meta charset="UTF-8">
-            <title>CodePen - Snake highlight</title>
+            <title> Logowanie </title>
             <link rel="stylesheet" href="./css/loginForm.css">
 
         </head>

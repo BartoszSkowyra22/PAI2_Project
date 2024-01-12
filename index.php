@@ -9,7 +9,7 @@
         include 'klasy/User.php';
         include 'klasy/RegistrationForm.php';
         include 'klasy/Baza.php';
-        $db = new Baza("127.0.0.1", "root", "root", "students", 8889);
+        $db = new Baza("127.0.0.1", "root", "root", "tasks", 8889);
         $rf = new RegistrationForm();
 
         if (filter_input(INPUT_POST, 'submit', FILTER_SANITIZE_FULL_SPECIAL_CHARS)) {
