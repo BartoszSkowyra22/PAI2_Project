@@ -1,4 +1,12 @@
 <?php include('view/header.php'); ?>
+<?php
+$courses = get_courses();
+$course_id = filter_input(INPUT_POST, 'course_id', FILTER_VALIDATE_INT);
+if(!$course_id){
+    $course_id = filter_input(INPUT_GET, 'course_id', FILTER_VALIDATE_INT);
+}
+$assignments = get_assignments_by_course($course_id);
+?>
 
 <section id="list" class="list">
     <header class="list__row list__header">
@@ -29,8 +37,8 @@
             </div>
             <div class="list__removeItem">
                 <form action="." method="post">
-                    <input type="hidden" name="action" value="delete_assignement">
-                    <input type="hidden" name="assignement_id" value="<?=$assignment['id'] ?>">
+                    <input type="hidden" name="action" value="delete_assignment">
+                    <input type="hidden" name="assignment_id" value="<?=$assignment['id'] ?>">
                     <button class="remove-button"> X </button>
                 </form>
             </div>
@@ -51,7 +59,7 @@
 <section id="add" class="add">
     <h2>Dodaj zadanie</h2>
     <form action="." method="post" id="add__form"  class="add__form">
-        <input type="hidden" name="action" value="add_assignement">
+        <input type="hidden" name="action" value="add_assignment">
         <div class="add_inputs">
             <label for="">Zadanie: </label>
             <select name="course_id" id="" required>
@@ -66,11 +74,11 @@
             <input type="text" name="description" maxlength="120" placeholder="Opis" required>
         </div>
         <div class="add__addItem">
-            <button class="add-button bold">Dodaj</button>
+            <button class="add-button bold">Add</button>
         </div>
     </form>
 </section>
 <br>
-<p><a href=".?action=list_courses">Zobacz/Edytuj zadania</a></p>
+<p><a href=".?action=list_courses">Zobacz/Edytuj Kategorie</a></p>
 
 <?php include ('view/footer.php'); ?>

@@ -1,6 +1,9 @@
 <?php include('view/header.php'); ?>
+<?php
+$courses = get_courses();
 
-    <?php  if($course) {?>
+?>
+    <?php  if($courses) {?>
         <section id="list" class="list">
             <header class="list__row list__header">
                 <h1>Lista Kategorii</h1>
