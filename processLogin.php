@@ -23,7 +23,7 @@ if (filter_input(INPUT_POST, "zaloguj")) {
             header("location:userPage.php");
         }
         if($userData["status"] == 2) {
-            header("location:adminPage.php");
+            header("location:index.php");
         }
     } else if(isset($_SESSION['success']) && $_SESSION['success']==true){
         $msg="juz zalogowano wylogowywanie";
