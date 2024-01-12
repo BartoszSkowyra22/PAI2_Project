@@ -26,7 +26,7 @@ if(!$course_id){
 
 $action = filter_input(INPUT_POST, 'action', FILTER_SANITIZE_STRING);
 if(!$action){
-    $action = filter_input(INPUT_POST, 'description', FILTER_SANITIZE_STRING);
+    $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
     if(!$action){
         $action = 'list_assignments';
     }
