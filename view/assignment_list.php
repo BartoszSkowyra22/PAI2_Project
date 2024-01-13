@@ -10,11 +10,11 @@ $assignments = get_assignments_by_course($course_id);
 
 <section id="list" class="list">
     <header class="list__row list__header">
-        <h1>Assignments</h1>
+        <h1>Lista zadań</h1>
         <form action="." method="get" id="list__header_select" class="list__header_select">
             <input type="hidden" name="action" value="list_assignments">
             <select name="course_id" id="" required>
-                <option value="0">View All</option>
+                <option value="0">Wszystko</option>
                 <?php foreach ($courses as $course) : ?>
                 <?php if($course_id == $course['courseID']) {?>
                     <option value="<?=$course['courseID']?>" selected>
@@ -70,8 +70,8 @@ $assignments = get_assignments_by_course($course_id);
                 </option>
                 <?php endforeach; ?>
             </select>
-            <label for="">Opis: </label>
-            <input type="text" name="description" maxlength="120" placeholder="Opis" required>
+            <label for="input_description_for_assignement">Opis: </label>
+            <input type="text" name="description" maxlength="120" placeholder="Opis" id="input_description_for_assignement" required>
         </div>
         <div class="add__addItem">
             <button class="add-button bold">Add</button>
@@ -80,5 +80,6 @@ $assignments = get_assignments_by_course($course_id);
 </section>
 <br>
 <p><a href=".?action=list_courses">Zobacz/Edytuj Kategorie</a></p>
+<p><a href="processLogin.php?akcja=wyloguj">Wyloguj</a></p>
 
 <?php include ('view/footer.php'); ?>
