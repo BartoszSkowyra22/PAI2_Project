@@ -25,7 +25,7 @@ $assignments = get_assignments_by_course($course_id);
                 </option>
                 <?php endforeach; ?>
             </select>
-            <button class="add-button bold">Go</button>
+            <button class="add-button bold">Szukaj</button>
         </form>
     </header>
     <?php if($assignments) { ?>
@@ -74,7 +74,7 @@ $assignments = get_assignments_by_course($course_id);
             <input type="text" name="description" maxlength="120" placeholder="Opis" id="input_description_for_assignement" required>
         </div>
         <div class="add__addItem">
-            <button class="add-button bold">Add</button>
+            <button class="add-button bold">Dodaj</button>
         </div>
     </form>
 </section>

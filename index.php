@@ -56,14 +56,14 @@ if ($loggedUserId != -1) {
             break;
         case "delete_course":
             if ($course_id){
-                try {
-                    delete_course($course_id);
-                } catch (PDOException $e){
-                    $error = "Nie można usunąć kategorii, jeżeli są do niej przypisane zadania!";
-                    include('view/error.php');
-                    exit();
+                if (delete_course($course_id)) {
+                    header("Location: .?action=list_courses");
+                } else {
+                    echo '<script>';
+                    echo 'alert("Nie można usunąć tej kategorii, ponieważ są do niej przypisane zadania!");';
+                    echo 'setTimeout(function() { window.location.href = ".?action=list_courses"; }, 10);';
+                    echo '</script>';
                 }
-                header("Location: index.php?action=list_courses");
             }
             break;
         case "delete_assignment":

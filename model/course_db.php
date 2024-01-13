@@ -26,11 +26,18 @@
 
     function delete_course($course_id){
         global $bd;
-        $query = 'DELETE FROM fields WHERE courseID = :course_id';
-        $statement = $bd-> prepare($query);
-        $statement->bindValue(':course_id', $course_id);
-        $statement->execute();
-        $statement->closeCursor();
+
+        try {
+            $query = 'DELETE FROM fields WHERE courseID = :course_id';
+            $statement = $bd->prepare($query);
+            $statement->bindValue(':course_id', $course_id);
+            $result = $statement->execute();
+            $statement->closeCursor();
+
+            return $result;
+        } catch (PDOException $e) {
+            return false;
+        }
     }
 
     function add_course($course_name){
