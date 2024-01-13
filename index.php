@@ -82,7 +82,6 @@ if ($loggedUserId != -1) {
             include('view/assignment_list.php');
 
     }
-    echo "<a href='processLogin.php?akcja=wyloguj' > <p>Wyloguj</p></a> </p>";
 
 } else {
     session_destroy();

@@ -6,7 +6,7 @@ $courses = get_courses();
     <?php  if($courses) {?>
         <section id="list" class="list">
             <header class="list__row list__header">
-                <h1>Lista Kategorii</h1>
+                <h1>Lista kategorii</h1>
             </header>
 
             <?php  foreach($courses as $course) : ?>
@@ -25,7 +25,7 @@ $courses = get_courses();
             <?php endforeach; ?>
         </section>
     <?php } else { ?>
-        <p>Nie istnieją jeszcze żadne Kategorie</p>
+        <p>Nie istnieją jeszcze żadne kategorie</p>
     <?php } ?>
 
 <section id="add" class="add">
@@ -33,8 +33,8 @@ $courses = get_courses();
     <form action="." method="post" id="add__form" class="add__form">
         <input type="hidden" name="action" value="add_course">
         <div class="add__inputs">
-            <label for="">Nazwa:</label>
-            <input type="text" name="course_name" maxlength="50" placeholder="Nazwa" autofocus required>
+            <label for="input_name_description">Nazwa:</label>
+            <input type="text" name="course_name" maxlength="50" placeholder="Nazwa" id="input_name_description" required>
         </div>
         <div class="add__addItem">
             <button class="add-button bold">Add</button>
@@ -42,6 +42,7 @@ $courses = get_courses();
     </form>
     <br>
     <p><a href=".">Zobacz &amp; Dodaj zadania</a></p>
+    <p><a href='processLogin.php?akcja=wyloguj'>Wyloguj</a></p>
 </section>
 
 
