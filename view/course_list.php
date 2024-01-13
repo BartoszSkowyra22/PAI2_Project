@@ -40,7 +40,7 @@ $courses = get_courses();
         </div>
     </form>
     <br>
-    <p><a href=".">Zobacz &amp; Dodaj zadania</a></p>
+    <p><a href=".">Zobacz zadania</a></p>
     <p><a href='processLogin.php?akcja=wyloguj'>Wyloguj</a></p>
 </section>
 

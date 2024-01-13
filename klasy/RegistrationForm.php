@@ -7,27 +7,30 @@ class RegistrationForm {
     protected $user;
     function __construct() {
         ?>
-    <h3> Formularz rejestracji</h3>
-        <form action="index.php" method="POST">
-        <label for="userName">Username:</label><br/>
-        <input type="text" id="userName" name="userName">
-        <br><br>
+            <div class="whiteBg">
+                    <h3> Formularz rejestracji</h3>
+                        <form action="index.php" method="POST" >
+                        <label for="userName">Username:</label><br/>
+                        <input type="text" id="userName" name="userName">
+                        <br><br>
 
-        <label for="passwd">Password:</label><br/>
-        <input type="password" id="passwd" name="passwd">
-        <br><br>
+                        <label for="passwd">Password:</label><br/>
+                        <input type="password" id="passwd" name="passwd">
+                        <br><br>
 
-        <label for="fullName">Full Name:</label><br/>
-        <input type="text" id="fullName" name="fullName">
-        <br><br>
+                        <label for="fullName">Full Name:</label><br/>
+                        <input type="text" id="fullName" name="fullName">
+                        <br><br>
 
-        <label for="email">Email:</label><br/>
-        <input type="email" id="email" name="email">
-        <br><br>
+                        <label for="email">Email:</label><br/>
+                        <input type="email" id="email" name="email">
+                        <br><br>
 
-        <input type="submit" name="submit" value="Rejestruj">
-        <input type="reset" value="Anuluj">
-    </form>
+                        <input type="submit" name="submit" value="Rejestruj">
+                        <input type="reset" value="Anuluj">
+                    </form>
+                <p><a href=".">Powrót</a></p>
+                </div>
         <?php
     }
 
