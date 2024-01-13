@@ -28,6 +28,7 @@ $assignments = get_assignments_by_course($course_id);
             <button class="add-button bold">Szukaj</button>
         </form>
     </header>
+
     <?php if($assignments) { ?>
         <?php foreach ($assignments as $assignment) : ?>
         <div class="list__row">
@@ -77,9 +78,10 @@ $assignments = get_assignments_by_course($course_id);
             <button class="add-button bold">Dodaj</button>
         </div>
     </form>
+    <p><a href=".?action=list_courses">Edytuj Kategorie</a></p>
+    <p><a href="processLogin.php?akcja=wyloguj">Wyloguj</a></p>
 </section>
 <br>
-<p><a href=".?action=list_courses">Zobacz/Edytuj Kategorie</a></p>
-<p><a href="processLogin.php?akcja=wyloguj">Wyloguj</a></p>
+
 
 <?php include ('view/footer.php'); ?>

@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Formularz rejestracyjny</title>
+        <link rel="stylesheet" href="./sass/main.css">
     </head>
     <body>
     <?php
@@ -20,7 +21,7 @@
                  $user->saveDB($db);
                  User::getAllUsersFromDB($db);
             }
-        }
+}
     ?>
     </body>
 </html>
