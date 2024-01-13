@@ -1,7 +1,6 @@
 <?php include('view/header.php'); ?>
 <?php
 $courses = get_courses();
-
 ?>
     <?php  if($courses) {?>
         <section id="list" class="list">
@@ -37,7 +36,7 @@ $courses = get_courses();
             <input type="text" name="course_name" maxlength="50" placeholder="Nazwa" id="input_name_description" required>
         </div>
         <div class="add__addItem">
-            <button class="add-button bold">Add</button>
+            <button class="add-button bold">Dodaj</button>
         </div>
     </form>
     <br>

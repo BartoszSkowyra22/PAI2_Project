@@ -6,7 +6,7 @@
 try {
     $bd = new PDO($dsn, $username, $password);
 } catch (PDOException $e) {
-    $error = "Databaase error: ";
+    $error = "Błąd bazy danych: ";
     $error .= $e -> getMessage();
     include('view/error.php');
     exit();

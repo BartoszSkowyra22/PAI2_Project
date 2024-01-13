@@ -63,7 +63,7 @@ if ($loggedUserId != -1) {
                     include('view/error.php');
                     exit();
                 }
-                header("Location: index.php?action=list_courses");
+                header("Location: .?action=list_courses");
             }
             break;
         case "delete_assignment":
