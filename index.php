@@ -32,7 +32,7 @@ if(!$action){
     }
 }
 
-if ($loggedUserId != -1) {
+if ($loggedUserId != -1 && $loggedUserId != 1) {
 
     switch ($action){
         case "list_courses":

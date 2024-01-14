@@ -9,7 +9,7 @@ class RegistrationForm {
         ?>
             <div class="whiteBg">
                     <h3> Formularz rejestracji</h3>
-                        <form action="index.php" method="POST" >
+                        <form action="addUser.php" method="POST" >
                         <label for="userName">Username:</label><br/>
                         <input type="text" id="userName" name="userName">
                         <br><br>
@@ -29,7 +29,7 @@ class RegistrationForm {
                         <input type="submit" name="submit" value="Rejestruj">
                         <input type="reset" value="Anuluj">
                     </form>
-                <p><a href=".">Powrót</a></p>
+                <a href='processLogin.php?akcja=wyloguj' > <p>Wyloguj</p></a> </p>
                 </div>
         <?php
     }

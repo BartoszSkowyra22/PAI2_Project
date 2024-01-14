@@ -17,7 +17,12 @@ if (filter_input(INPUT_POST, "zaloguj")) {
     if ($userId > 0) {
         $userDataResult = $db->query("SELECT status FROM users WHERE id = $userId");
         $userData = $userDataResult->fetch_assoc();
-        header("location:index.php");
+        if($userData["status"] == 1){
+            header("location:index.php");
+        }
+        if($userData["status"] == 2) {
+            header("location:addUser.php");
+        }
     } else if(isset($_SESSION['success']) && $_SESSION['success']==true){
         $msg="juz zalogowano wylogowywanie";
         $_SESSION['success'] = 'false';

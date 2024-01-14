@@ -64,6 +64,12 @@ a:hover {
   border-radius: 5px;
 }
 
+.whiteBg2 {
+  background: #fff;
+  padding: 50px;
+  border-radius: 0;
+}
+
 .list {
   width: 95%;
   max-height: 70vh;
