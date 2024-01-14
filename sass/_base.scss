@@ -20,6 +20,7 @@ body {
   max-width: 800px;
   min-height: 100vh;
   overflow-y: hidden;
+  border-radius: 10px;
   @include flexStart;
   flex-direction: column;
   @include mq(800px) {
