@@ -3,7 +3,7 @@
 2. Login details for created accounts
     USER ACCOUNT:
     Login: user
-    Password: Qwerty1
+    Password: Qwerty1!
 
     ADMIN ACCOUNT:
     Login: admin
