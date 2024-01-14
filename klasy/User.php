@@ -131,15 +131,21 @@ class User {
             $sql="INSERT INTO users VALUES (NULL, '$this->userName' , '$this->fullName',"
                     . "'$this->email' ,'$this->passwd' , '$this->status','$dat' )";
              $db->insert($sql);
-            echo "<p>Poprawne dane rejestracji:</p>";
+            echo '<div class="whiteBg2">';
+            echo "<p>Utworzono nowego użytkownika</p>";
+            echo '</div>';
         } else {
+            echo '<div class="whiteBg2">';
             echo "<p>Użytkownik o takim loginie istnieje</p>";
+            echo '</div>';
         }
     }
 static function getAllUsersFromDB($db) {
+        echo '<div class="whiteBg">';
     echo $db->select("SELECT id, userName, fullName, email, status, "
             . "DATE_FORMAT(date, '%Y-%m-%d') AS formattedDate FROM users", 
             ["id", "userName", "fullName", "email", "status", "formattedDate"]);
+        echo '</div>';
 
 }
 }
