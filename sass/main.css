@@ -25,6 +25,7 @@ body {
   max-width: 800px;
   min-height: 100vh;
   overflow-y: hidden;
+  border-radius: 10px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -115,6 +116,11 @@ a:hover {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .list__header {
+    max-height: 90px;
+  }
+}
 .list__header h1 {
   font-size: 1.5rem;
 }
